@@ -1,0 +1,17 @@
+service: uk-covid19-service
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+functions:
+  web-bff:
+    handler: packages/server/src/handler.default
+    events:
+      - http:
+          path: daily-cases
+          method: get

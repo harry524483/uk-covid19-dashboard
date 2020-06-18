@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "jsx": "react",
+    "lib": ["dom", "dom.iterable"],
+    "noEmit": true,
+    "skipLibCheck": true,
+    "module": "esnext"
+  },
+  "include": ["src"]
+}

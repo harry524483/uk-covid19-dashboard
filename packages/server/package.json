@@ -1,0 +1,10 @@
+{
+  "name": "@dashboard/server",
+  "version": "0.0.0",
+  "description": "NodeJS serverless",
+  "author": "harry524483 <harinder.singh@sainsburys.co.uk>",
+  "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  }
+}
