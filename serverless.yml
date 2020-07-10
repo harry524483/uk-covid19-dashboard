@@ -1,7 +1,14 @@
 service: uk-covid19-service
 
+package:
+  individually: true
+
+custom:
+  serverless-offline:
+    httpPort: 4000
+
 plugins:
-  - serverless-plugin-typescript
+  - serverless-webpack
   - serverless-offline
 
 provider:
@@ -13,5 +20,8 @@ functions:
     handler: packages/server/src/handler.default
     events:
       - http:
-          path: daily-cases
+          path: dashboard
+          method: get
+      - http:
+          path: geo-data
           method: get

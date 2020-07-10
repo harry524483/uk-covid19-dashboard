@@ -1,12 +1,9 @@
 import excelToJson from 'convert-excel-to-json';
 import fs from 'fs';
-import path from 'path';
 
+// @ts-ignore
+import sourceFile from '../data/2020-06-26_COVID-19_Data.xlsx';
 import SheetOptions from '../types/SheetOptions';
-
-const source = fs.readFileSync(
-  path.join(__dirname, '..', 'data/2020-06-26_COVID-19_Data.xlsx')
-);
 
 const convertExcelToJson = (sheetCollection: Array<SheetOptions>) => {
   const sheets = sheetCollection
@@ -20,7 +17,7 @@ const convertExcelToJson = (sheetCollection: Array<SheetOptions>) => {
     }));
 
   const options = {
-    source,
+    source: fs.readFileSync(sourceFile),
     sheets,
   };
 

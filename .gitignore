@@ -4,3 +4,7 @@ npm-debug.log
 packages/*/lib
 .idea
 .build
+.webpack
+.serverless
+.DS_Store
+launch.json
