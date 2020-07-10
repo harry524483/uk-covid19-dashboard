@@ -1,0 +1,96 @@
+#root {
+  height: 100vh;
+}
+
+svg.country {
+  height: 500px;
+  width: 100%;
+  display: block;
+  overflow: visible;
+}
+
+svg.legend {
+  width: 100%;
+  display: block;
+  overflow: visible;
+  height: 20px;
+  margin-bottom: 4rem;
+}
+
+.selected {
+  background: #babbbc !important;
+}
+
+.legend-caption {
+  font-size: 13px;
+}
+
+.chart-stats {
+  font-size: 18px;
+}
+
+.map-title {
+  margin-top: 1rem !important;
+  text-align: center;
+  color: #6c757d;
+}
+
+.table-title {
+  margin-top: 1rem !important;
+  color: #6c757d;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 3rem;
+}
+
+.banner {
+  height: 50px;
+  background: #001529;
+  margin-bottom: 1.5rem;
+  color: white;
+  font-weight: bolder;
+  padding: 15px 0px 15px 30px;
+  font-size: 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.dashboard-grid {
+  margin: 0px 10px 0px 10px;
+}
+
+.stats-container-item {
+  font-weight: bolder;
+
+  .stats-label {
+    margin: 0px;
+    margin-bottom: 0.3rem;
+    font-size: 15px;
+  }
+
+  .stats-value {
+    text-align: center;
+    font-size: 22px;
+  }
+}
+
+.color-blue {
+  color: #526cec;
+}
+
+.color-red {
+  color: #e15974;
+}
+
+.color-brown {
+  color: #7e101f;
+}
+
+.color-orange {
+  color: #eb6b34;
+}

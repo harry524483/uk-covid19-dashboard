@@ -6,5 +6,8 @@
   "license": "ISC",
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "convert-excel-to-json": "^1.7.0"
   }
 }
