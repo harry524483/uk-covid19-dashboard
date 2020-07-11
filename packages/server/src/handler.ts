@@ -21,8 +21,7 @@ const handler = async (event: Event) => {
   return {
     statusCode: 200,
     headers: {
-      'Access-Control-Allow-Origin':
-        'http://uk-covid19-web-bucket.s3-website-us-east-1.amazonaws.com',
+      'Access-Control-Allow-Origin': process.env.ALLOWED_ORIGIN,
     },
     body: JSON.stringify(result),
   };
