@@ -8,11 +8,11 @@
     "lerna": "^3.20.2",
     "serverless": "^1.73.1",
     "serverless-offline": "^6.4.0",
+    "serverless-s3-sync": "^1.14.4",
     "serverless-webpack": "^5.3.2",
     "ts-loader": "^8.0.0",
     "typescript": "^3.9.5",
-    "webpack": "4.42.0",
-    "webpack-node-externals": "^2.2.0"
+    "webpack": "4.42.0"
   },
   "workspaces": [
     "packages/*"

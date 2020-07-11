@@ -20,14 +20,10 @@ const { Column, Row } = Grid;
 
 const Dashboard = () => {
   const [chartDateRange, setChartDateRange] = useState(DateRange.OneMonth);
-  const { data: dashboardData } = useSWR(
-    'http://localhost:4000/dev/dashboard',
-    fetcher,
-    {
-      revalidateOnFocus: false,
-      suspense: true,
-    }
-  );
+  const { data: dashboardData } = useSWR('/dashboard', fetcher, {
+    revalidateOnFocus: false,
+    suspense: true,
+  });
 
   return (
     <>

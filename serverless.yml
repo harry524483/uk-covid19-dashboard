@@ -4,12 +4,18 @@ package:
   individually: true
 
 custom:
+  webBucketName: 'uk-covid19-web-bucket'
+  allowedOrigin: 'http://uk-covid19-web-bucket.s3-website-us-east-1.amazonaws.com'
   serverless-offline:
     httpPort: 4000
+  s3Sync:
+    - bucketName: ${self:custom.webBucketName}
+      localDir: packages/web/build
 
 plugins:
   - serverless-webpack
   - serverless-offline
+  - serverless-s3-sync
 
 provider:
   name: aws
@@ -22,6 +28,21 @@ functions:
       - http:
           path: dashboard
           method: get
+          cors:
+            origins:
+              - '${self:custom.allowedOrigin}'
       - http:
           path: geo-data
           method: get
+          cors:
+            origins:
+              - '${self:custom.allowedOrigin}'
+resources:
+  Resources:
+    WebBucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: ${self:custom.webBucketName}
+        WebsiteConfiguration:
+          IndexDocument: index.html
+          ErrorDocument: error.html

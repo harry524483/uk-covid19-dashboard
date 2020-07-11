@@ -18,14 +18,10 @@ const GeoChart = ({ data: { data: totalCases } }) => {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const dimensions = useResizeObserver(wrapperRef);
 
-  const { data: geoData } = useSWR(
-    'http://localhost:4000/dev/geo-data',
-    fetcher,
-    {
-      revalidateOnFocus: false,
-      suspense: true,
-    }
-  );
+  const { data: geoData } = useSWR('/geo-data', fetcher, {
+    revalidateOnFocus: false,
+    suspense: true,
+  });
 
   useEffect(() => {
     const topology = topojson.feature(geoData, geoData.objects.regions);
