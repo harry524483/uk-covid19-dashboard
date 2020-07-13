@@ -1,18 +1,18 @@
-import React, { lazy, Suspense } from "react";
-import ReactDOM from "react-dom";
+import React, { lazy, Suspense } from 'react';
+import ReactDOM from 'react-dom';
 
-import "./index.scss";
-import * as serviceWorker from "./serviceWorker";
+import './index.scss';
+import * as serviceWorker from './serviceWorker';
 
-const App = lazy(() => import("./App"));
+const App = lazy(() => import('./App'));
 
 ReactDOM.render(
   <React.StrictMode>
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div />}>
       <App />
     </Suspense>
   </React.StrictMode>,
-  document.getElementById("root")
+  document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change

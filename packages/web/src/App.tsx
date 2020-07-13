@@ -1,10 +1,15 @@
-import React from "react";
-import Dashboard from "./components/Dashboard";
+import React, { lazy, Suspense } from 'react';
 
-import "./App.scss";
+import './App.scss';
+
+const Dashboard = lazy(() => import('./components/Dashboard'));
 
 function App() {
-  return <Dashboard />;
+  return (
+    <Suspense fallback={<div />}>
+      <Dashboard />
+    </Suspense>
+  );
 }
 
 export default App;

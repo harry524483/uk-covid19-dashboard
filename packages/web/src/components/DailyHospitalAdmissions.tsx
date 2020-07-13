@@ -1,15 +1,15 @@
-import React from "react";
+import React, { lazy, Suspense } from 'react';
 
-import Table from "./Table";
+const Table = lazy(() => import('./Table'));
 
 const CountryNameDictionary = {
-  england: "England",
-  scotland: "Scotland",
-  wales: "Wales",
-  north_ireland: "North Ireland",
+  england: 'England',
+  scotland: 'Scotland',
+  wales: 'Wales',
+  north_ireland: 'North Ireland',
 };
 
-const columns = ["S.No.", "Country", "Count"];
+const columns = ['S.No.', 'Country', 'Count'];
 
 const DailyHospitalAdmissions = ({ data }) => {
   const latestRecord = data[data.length - 1];
@@ -24,12 +24,14 @@ const DailyHospitalAdmissions = ({ data }) => {
   }
 
   return (
-    <Table
-      columns={columns}
-      title="Daily Hospital Admissions"
-      rows={rows}
-      color="brown"
-    ></Table>
+    <Suspense fallback={<div />}>
+      <Table
+        columns={columns}
+        title="Daily Hospital Admissions"
+        rows={rows}
+        color="brown"
+      ></Table>
+    </Suspense>
   );
 };
 

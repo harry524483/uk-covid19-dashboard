@@ -48,7 +48,7 @@ const NewCasesChart = ({ dateRange, newCases }: NewCasesChartProps) => {
   };
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div />}>
       <Chart {...createChartProps()} backgroundColor="#FFECEC" />
     </Suspense>
   );

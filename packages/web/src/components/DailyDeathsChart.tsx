@@ -42,7 +42,7 @@ const DailyDeathsChart = ({ dateRange, data: { data } }) => {
   };
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div />}>
       <Chart {...createChartProps()} backgroundColor="#DFFDF8" />
     </Suspense>
   );

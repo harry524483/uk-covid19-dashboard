@@ -12,7 +12,7 @@ svg.country {
 svg.legend {
   width: 100%;
   display: block;
-  overflow: visible;
+  overflow: visible !important;
   height: 20px;
   margin-bottom: 4rem;
 }
