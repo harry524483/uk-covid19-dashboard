@@ -1,0 +1,2 @@
+(this["webpackJsonp@dashboard/web"]=this["webpackJsonp@dashboard/web"]||[]).push([[19],{209:function(e,a,n){"use strict";n.r(a);var t=n(0),s=n.n(t),l=Object(t.lazy)((function(){return n.e(0).then(n.bind(null,32))})),r=["Country","Daily Cases","Daily Deaths","Total Tests"];a.default=function(e){var a=e.nationDailyRecords;return s.a.createElement(t.Suspense,{fallback:s.a.createElement("div",null)},s.a.createElement(l,{columns:r,rows:a}))}}}]);
+//# sourceMappingURL=19.8f8076a9.chunk.js.map
